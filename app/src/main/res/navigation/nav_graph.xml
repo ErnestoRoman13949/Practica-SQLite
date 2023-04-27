@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/addCiudadFragment">
+
+    <fragment
+        android:id="@+id/addCiudadFragment"
+        android:name="edu.uca.roman.roompractica.ui.view.adapter.AddCiudadFragment"
+        android:label="fragment_add_ciudad"
+        tools:layout="@layout/fragment_add_ciudad" >
+        <action
+            android:id="@+id/action_addCiudadFragment_to_ciudadFragment"
+            app:destination="@id/ciudadFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ciudadFragment"
+        android:name="edu.uca.roman.roompractica.ui.view.adapter.CiudadFragment"
+        android:label="fragment_ciudad"
+        tools:layout="@layout/fragment_ciudad" >
+        <action
+            android:id="@+id/action_ciudadFragment_to_addCiudadFragment"
+            app:destination="@id/addCiudadFragment" />
+    </fragment>
+</navigation>
